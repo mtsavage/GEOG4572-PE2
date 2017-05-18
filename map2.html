@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rusic Celtic Isles</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        html, body, #map {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+    </style>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v1.0.3/leaflet.css" />
+    <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.35.1/mapbox-gl.css" rel='stylesheet' />
+    <!-- Javascript Libraries -->
+    <script src="http://cdn.leafletjs.com/leaflet/v1.0.3/leaflet.js"></script>
+    <!-- mapbox gl js -->
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.35.1/mapbox-gl.js"></script>
+    <!-- leaflet mapbox js -->
+    <script src="http://rawgit.com/mapbox/mapbox-gl-leaflet/master/leaflet-mapbox-gl.js"></script>
+
+</head>
+
+<body>
+<div id="map"></div>
+<script>
+    var map = L.map('map').setView([53.225, -1.601], 5);
+
+    var gl = L.mapboxGL({
+        accessToken: 'pk.eyJ1Ijoic2F2YWdlbSIsImEiOiJjaXp1ZW1xYmEwMHdvMndwM3Y2b3V3bW5qIn0.N1fF74bH4lqXaLUaJFxsFA',
+        style: 'style.json'
+    }).addTo(map);
+</script>
+</body>
+</html>
